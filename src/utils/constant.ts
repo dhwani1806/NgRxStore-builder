@@ -7,3 +7,7 @@ export const FILETYPE = {
     SERVICE : "service",
     MODEL : "model"
 }
+
+export const OUTPUT_LOG_COLORS = {
+    SUCCESS: "\x1b[32m"
+}
