@@ -5,7 +5,7 @@ When we integrate NgRx in any Angular project, we face the issue of repetitive c
 
 #### Note: This package will only work with node version 11 and above and this package is build to be used in Angular projects only.
 
-![Alt text](name-of-gif-file.gif
+![Alt text](ngrx-store-builder.gif)
 ##  Installation 
 Install ngrx-store-builder with npm
 
