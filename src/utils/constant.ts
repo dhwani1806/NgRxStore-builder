@@ -9,5 +9,7 @@ export const FILETYPE = {
 }
 
 export const OUTPUT_LOG_COLORS = {
-    SUCCESS: "\x1b[32m"
+    SUCCESS: "\x1b[32m",
+    ERROR: "\x1b[31m",
+    WARNING:"\x1b[33m"
 }

@@ -7,7 +7,10 @@ export const generateFile = (
   fileType: string
 ) => {
   fs.writeFile(fileName, fileTemplate, function (err) {
-    if (err) throw err;
+    if (err){
+      console.log(OUTPUT_LOG_COLORS.ERROR,`[ERROR] ${fileName} NOT FOUND`);
+      return;
+    }
     console.log(
       OUTPUT_LOG_COLORS.SUCCESS,
       `[SUCCESS] ${fileType.charAt(0).toLocaleUpperCase()}${fileType.slice(

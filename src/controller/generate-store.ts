@@ -16,63 +16,63 @@ import { getFilePath } from "../utils/path";
 (async function () {
   const model = await getModelDetails();
   if (model.filesToGenerate.includes(FILETYPE.ACTION)) {
-    await createFile("store", "store/actions");
+    await createFile(model.pathStore,"store", "store/actions");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.ACTION),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.ACTION),
       actionStructure(model.modelName),
       FILETYPE.ACTION
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.REDUCER)) {
-    await createFile("store", "store/reducers");
+    await createFile(model.pathStore,"store", "store/reducers");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.REDUCER),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.REDUCER),
       reducerStructure(model.modelName),
       FILETYPE.REDUCER
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.STATE)) {
-    await createFile("store", "store/states");
+    await createFile(model.pathStore,"store", "store/states");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.STATE),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.STATE),
       stateStructure(model.modelName),
       FILETYPE.STATE
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.EFFECT)) {
-    await createFile("store", "store/effects");
+    await createFile(model.pathStore,"store", "store/effects");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.EFFECT),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.EFFECT),
       effectStructure(model.modelName),
       FILETYPE.EFFECT
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.SERVICE)) {
-    await createFile("store", "store/services");
+    await createFile(model.pathStore,"store", "store/services");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.SERVICE),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.SERVICE),
       serviceStructure(model.modelName),
       FILETYPE.SERVICE
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.SELECTOR)) {
-    await createFile("store", "store/selectors");
+    await createFile(model.pathStore,"store", "store/selectors");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.SELECTOR),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.SELECTOR),
       selectorStructure(model.modelName),
       FILETYPE.SELECTOR
     );
   }
 
   if (model.filesToGenerate.includes(FILETYPE.MODEL)) {
-    await createFile("store", "store/models");
+    await createFile(model.pathStore,"store", "store/models");
     await generateFile(
-      getFilePath(model.modelName, FILETYPE.MODEL),
+      getFilePath(model.pathStore,model.modelName, FILETYPE.MODEL),
       modelStructure(model.modelName, model.modelProperty),
       FILETYPE.MODEL
     );
