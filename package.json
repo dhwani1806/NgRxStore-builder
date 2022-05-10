@@ -1,6 +1,6 @@
 {
   "name": "ngrx-store-builder",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "NgRx Store Generator",
   "main": "dist/controller/generate-store.js",
   "types": "dist/controller/generate-store.d.ts",
